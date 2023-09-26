@@ -11,12 +11,14 @@ body {
     background-color: #f8fbfb;
     font-family: 'Noto Sans Thai', sans-serif;
 }
+
 marquee {
     width: 100%;
     padding: 10px 0;
     background-color: #fc8955;
     font-size: 20px;
 }
+
 h1 {
     text-align: center;
     font-size: 75px;
@@ -30,10 +32,21 @@ h2 {
 h3 {
     font-size: 22px;
 }
+
 #p1 {
     font-size: 22px;
     text-align: right;
 }
+
+#description {
+    font-size: 24px;
+    text-align: center;
+}
+
+#ref {
+    margin: 20px;
+}
+
 pre {
     font-size: 16px;
 }
@@ -51,8 +64,8 @@ pre {
 }
 
 #card {
-    width: 370px;
-    height: 555px;
+    width: 420px;
+    height: 538px;
     padding: 2rem 1rem;
     background: #fff;
     position: relative;
@@ -143,7 +156,7 @@ pre {
 
 .navbar {
     position: absolute;
-    margin: 15px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -174,3 +187,4 @@ pre {
     color: #ff6010;
     font-weight: 600;
 }
+
