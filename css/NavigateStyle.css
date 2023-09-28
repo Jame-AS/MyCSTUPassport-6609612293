@@ -1,0 +1,40 @@
+/* Navigation bar */
+
+.navigate header {
+    height: 100vh;
+    width: 100vh;
+}
+
+.navbar {
+    position: absolute;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: #000;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li{
+    margin: 0 25px;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.navbar .nav-links ul li.active a{
+    color: #ff6010;
+    font-weight: 600;
+}
