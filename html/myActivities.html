@@ -13,30 +13,59 @@
   </head>
 
   <body>
+    <header>
+      <div class="logo">My CSTU Passport</div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a href="/index.html">My Profile</a>
+          </li>
+          <li>
+            <a href="/html/myAdvisor.html">My Advisors</a>
+          </li>
+          <li>
+            <a href="/html/myActivities.html" class="active">My Activities</a>
+          </li>
+          <li>
+            <a href="/html/OrientationDay.html">Orientation Day</a>
+          </li>
+          <li>
+            <a href="/html/CSTU-1stMeet.html">CSTU 1st Meet</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          var hamburger = document.querySelector(".hamburger");
+          var navBar = document.querySelector(".nav-bar");
+  
+          hamburger.onclick = function() {
+              navBar.classList.toggle("active");
+              navBar.style.zIndex = "10";
+          }
+
+          document.addEventListener("click", function(event) {
+              if (!navBar.contains(event.target) && !hamburger.contains(event.target)) {
+                  navBar.classList.remove("active");
+                  navBar.style.zIndex = "0";
+              }
+          });
+      });
+    </script>
+
     <center>
       <marquee scrollamount="7">
         <strong>ยินดีต้อนรับผู้ที่เข้ามาเยี่ยมชมทุกท่านครับ Welcome to all visitor.</strong>
       </marquee>
     </center>
-
-    <div class="navigate">
-      <nav class="navbar">
-        <a href="/index.html" class="logo">My CSTU Passport</a>
-        <div class="nav-links">
-          <ul>
-            <li><a href="/html/myAdvisor.html">Advisors</a></li>
-            <li class="active">
-              <a href="/html/myActivities.html">Activities</a>
-            </li>
-            <li><a href="/index.html">About Me</a></li>
-          </ul>
-        </div>
-      </nav>
-      <br>
-      <br>
-      <br>
-    </div>
-
+    
     <h1><u>My Activities</u></h1>
     <p id="description">วางเมาส์ไว้ที่ภาพเพื่อแสดงรายละเอียด</p>
     <br>

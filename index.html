@@ -10,69 +10,67 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/NavigateStyle.css">
 
-    <style>
-      #quote {
-        position: absolute;
-        top: 90%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        font-family: "Noto Sans Thai", sans-serif;
-      }
-      #media {
-        float: left;
-      }
-      #pic1 {
-        margin: 0 20px 0 0;
-      }
-      #p1 {
-        float: right;
-      }
-      #fact {
-        position: absolute;
-        top: 575px;
-      }
-      #contract {
-        position: absolute;
-        top: 575px;
-        left: 480px;
-      }
-    </style>
   </head>
   <body>
+    <header>
+      <div class="logo">My CSTU Passport</div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a href="/index.html" class="active">My Profile</a>
+          </li>
+          <li>
+            <a href="/html/myAdvisor.html">My Advisors</a>
+          </li>
+          <li>
+            <a href="/html/myActivities.html">My Activities</a>
+          </li>
+          <li>
+            <a href="/html/OrientationDay.html">Orientation Day</a>
+          </li>
+          <li>
+            <a href="/html/CSTU-1stMeet.html">CSTU 1st Meet</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          var hamburger = document.querySelector(".hamburger");
+          var navBar = document.querySelector(".nav-bar");
+  
+          hamburger.onclick = function() {
+              navBar.classList.toggle("active");
+              navBar.style.zIndex = "10";
+          }
+
+          document.addEventListener("click", function(event) {
+              if (!navBar.contains(event.target) && !hamburger.contains(event.target)) {
+                  navBar.classList.remove("active");
+                  navBar.style.zIndex = "0";
+              }
+          });
+      });
+    </script>
+
     <center>
       <marquee scrollamount="7">
         <strong>ยินดีต้อนรับผู้ที่เข้ามาเยี่ยมชมทุกท่านครับ Welcome to all visitor.</strong>
       </marquee>
     </center>
 
-    <div class="navigate">
-      <nav class="navbar">
-        <a href="/index.html" class="logo">My CSTU Passport</a>
-        <div class="nav-links">
-          <ul>
-            <li><a href="/html/myAdvisor.html">Advisors</a></li>
-            <li><a href="/html/myActivities.html">Activities</a></li>
-            <li class="active"><a href="/index.html">About Me</a></li>
-          </ul>
-        </div>
-      </nav>
-      <br>
-      <br>
-      <br>
-    </div>
-
-    <h1><u>About Me</u></h1>
+    <h1><u>My Profile</u></h1>
     <br>
 
-    <div id="media" style="margin: 20px">
-      <img src="image/profile.jpeg" alt="This is me." width="450px" id="pic1" />
-      <video
-        src="VDO/profile_vid.mp4"
-        alt="About me clip."
-        width="450px"
-        controls
-      ></video>
+    <div class="media" style="margin: 20px">
+      <img src="image/profile.jpeg" alt="This is me." width="450px" class="pic1" />
+      <video src="VDO/profile_vid.mp4" alt="About me clip." width="450px" controls class="vid1"></video>
     </div>
 
     <div id="p1">
@@ -82,45 +80,31 @@
       <p>มหาวิทยาลัยธรรมศาสตร์</p>
     </div>
 
-    <div id="fact" style="margin: 20px">
-      <details>
-        <summary>
-          <h3><strong>Fact about me</strong></h3>
-        </summary>
-        <div>
-          <pre>
+    <div id="more_data">
+      <div id="fact">
+        <h3><strong>Fact about me</strong></h3>
+        <pre>
   จบการศึกษาจากโรงเรียนเทพศิรินทร์ (DSA137)
   งานอดิเรก: ฟังเพลง ดูยูทูป เล่นเกม
   วันเกิด: 2/7/2547
-            </pre
-          >
-        </div>
-      </details>
-    </div>
+        </pre>
+      </div>
 
-    <div id="contract" style="margin: 20px">
-      <details>
-        <summary>
-          <h3><strong>Contact</strong></h3>
-        </summary>
-        <div>
-          <pre>  Tel: 092-778-9568
+      <div id="contract">
+        <h3><strong>Contact</strong></h3>
+        <pre>  Tel: 092-778-9568
   <a href="https://www.instagram.com/jame_dsa137/" target="_blank">IG: jame_dsa137</a>
         </pre>
-          <br />
-        </div>
-      </details>
+        <br />
+      </div>
     </div>
 
     <div id="quote">
-      <hr />
       <p>
-        <q style="font-size: 18px; display: inline-block"
-          ><em>Past never dies, it stays in the mind forever.</em></q
-        ><br />
+        <q style="font-size: 18px; display: inline-block"><em>Past never dies, it stays in the mind forever.</em>
+        </q><br />
         Credit - IG: the_drakstories -
       </p>
-      <hr />
     </div>
   </body>
 </html>

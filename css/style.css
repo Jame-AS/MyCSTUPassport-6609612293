@@ -5,17 +5,19 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #f8fbfb;
+    background-color: #fefefe;
     font-family: 'Noto Sans Thai', sans-serif;
 }
 
 marquee {
     width: 100%;
     padding: 10px 0;
-    background-color: #fc8955;
+    background-color: #11101b;
+    color: #fefefe;
     font-size: 20px;
 }
 
@@ -33,9 +35,16 @@ h3 {
     font-size: 22px;
 }
 
+#description {
+    text-align: center;
+    font-size: 20px;
+}
+
 #p1 {
     font-size: 22px;
     text-align: right;
+    margin-right: 20px;
+    float: right;
 }
 
 #p2 {
@@ -49,10 +58,21 @@ h3 {
     margin: 10px 0 15px;
 }
 
-#description {
-    font-size: 24px;
-    text-align: center;
+
+#more_data #fact {
+    position: relative;
+    clear: both;
+    float: left;
+    margin-right: 20px;
+    left: 20px;
 }
+
+#more_data #contract {
+    position: relative;
+    float: left;
+    left: 110px;
+}
+
 
 #ref {
     margin: 20px;
@@ -66,4 +86,58 @@ h3 {
 
 pre {
     font-size: 16px;
+}
+
+#quote {
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    font-family: "Noto Sans Thai", sans-serif;
+    width: 100%;
+}
+  
+#quote p {
+    display: inline-block;
+    margin: 0;
+}
+
+#quote q {
+    font-size: 18px;
+}
+
+.pic1 {
+    margin: 0 20px 0 0;
+}
+
+@media (max-width: 1330px) {
+    #p1{
+        clear: none;
+        text-align: center;
+        display: inline-block;
+        margin: 0 20px 20px;
+        width: 100%;
+    }
+
+    .media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .media .pic1, .media .vid1 {
+        width: 400px;
+    }
+
+    #media video {
+        margin-top: 20px;
+    }
+
+    #quote {
+        position: relative;
+        width: 50%;
+        bottom: 10px;
+        text-align: center;
+        margin: auto;
+    }
 }
