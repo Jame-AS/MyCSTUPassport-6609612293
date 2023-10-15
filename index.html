@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="/css/NavigateStyle.css">
 
   </head>
-  <body>
-    <header>
+  <body id="scroll">
+    <header class="sticky">
       <div class="logo">My CSTU Passport</div>
       <div class="hamburger">
         <div class="line"></div>
@@ -40,6 +40,12 @@
       </nav>
     </header>
 
+    <center>
+      <marquee scrollamount="7">
+        <strong>ยินดีต้อนรับผู้ที่เข้ามาเยี่ยมชมทุกท่านครับ Welcome to all visitor.</strong>
+      </marquee>
+    </center>
+
     <script>
       document.addEventListener("DOMContentLoaded", function() {
           var hamburger = document.querySelector(".hamburger");
@@ -47,7 +53,7 @@
   
           hamburger.onclick = function() {
               navBar.classList.toggle("active");
-              navBar.style.zIndex = "10";
+              navBar.style.zIndex = "1000";
           }
 
           document.addEventListener("click", function(event) {
@@ -59,52 +65,48 @@
       });
     </script>
 
-    <center>
-      <marquee scrollamount="7">
-        <strong>ยินดีต้อนรับผู้ที่เข้ามาเยี่ยมชมทุกท่านครับ Welcome to all visitor.</strong>
-      </marquee>
-    </center>
-
     <h1><u>My Profile</u></h1>
     <br>
 
-    <div class="media" style="margin: 20px">
-      <img src="image/profile.jpeg" alt="This is me." width="450px" class="pic1" />
-      <video src="VDO/profile_vid.mp4" alt="About me clip." width="450px" controls class="vid1"></video>
-    </div>
-
-    <div id="p1">
-      <p style="font-size: 40px"><strong>อภิณัฐ สืบบุญ (เจมส์)</strong></p>
-      <p>นักศึกษาคณะวิทยาศาสตร์และเทคโนโลยี</p>
-      <p>สาขาวิทยาการคอมพิวเตอร์ (CIS)</p>
-      <p>มหาวิทยาลัยธรรมศาสตร์</p>
-    </div>
-
-    <div id="more_data">
-      <div id="fact">
-        <h3><strong>Fact about me</strong></h3>
-        <pre>
-  จบการศึกษาจากโรงเรียนเทพศิรินทร์ (DSA137)
+    <div id="main">
+      <div class="media" style="margin: 20px">
+        <img src="/image/profile.jpeg" alt="This is me." width="450px" class="pic1" />
+        <video src="/VDO/profile_vid.mp4" alt="About me clip." width="450px" controls class="vid1"></video>
+      </div>
+  
+      <div id="p1" class="name">
+        <p style="font-size: 40px"><strong>อภิณัฐ สืบบุญ (เจมส์)</strong></p>
+        <p>นักศึกษาคณะวิทยาศาสตร์และเทคโนโลยี</p>
+        <p>สาขาวิทยาการคอมพิวเตอร์ (CIS)</p>
+        <p>มหาวิทยาลัยธรรมศาสตร์</p>
+      </div>
+  
+      <div class="more_data">
+        <div id="fact">
+          <h3><strong>Fact about me</strong></h3>
+          <pre>  จบการศึกษาจากโรงเรียนเทพศิรินทร์ (DSA137)
   งานอดิเรก: ฟังเพลง ดูยูทูป เล่นเกม
   วันเกิด: 2/7/2547
-        </pre>
-      </div>
-
-      <div id="contract">
-        <h3><strong>Contact</strong></h3>
-        <pre>  Tel: 092-778-9568
+          </pre>
+        </div>
+  
+        <div id="contract">
+          <h3><strong>Contact</strong></h3>
+          <pre>  Tel: 092-778-9568
   <a href="https://www.instagram.com/jame_dsa137/" target="_blank">IG: jame_dsa137</a>
-        </pre>
-        <br />
+          </pre>
+          <br />
+        </div>
       </div>
     </div>
 
-    <div id="quote">
+    <footer>
       <p>
+        <br />
         <q style="font-size: 18px; display: inline-block"><em>Past never dies, it stays in the mind forever.</em>
         </q><br />
         Credit - IG: the_drakstories -
       </p>
-    </div>
+    </footer>
   </body>
 </html>

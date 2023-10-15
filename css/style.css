@@ -8,9 +8,25 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
+#scroll {
+    height: 75%;
+}
+
 body {
+    position: relative;
+    margin: 0;
     background-color: #fefefe;
-    font-family: 'Noto Sans Thai', sans-serif;
+    font-family: 'Noto Sans Thai', 'sans-serif';
+}
+
+#main {
+    min-height: 100%;
+    overflow: auto;
+    padding-bottom: 50px;
 }
 
 marquee {
@@ -33,6 +49,14 @@ h2 {
 
 h3 {
     font-size: 22px;
+}
+
+.media {
+    float: left;
+}
+
+.name {
+    float: right;
 }
 
 #description {
@@ -59,7 +83,7 @@ h3 {
 }
 
 
-#more_data #fact {
+.more_data #fact {
     position: relative;
     clear: both;
     float: left;
@@ -67,7 +91,7 @@ h3 {
     left: 20px;
 }
 
-#more_data #contract {
+.more_data #contract {
     position: relative;
     float: left;
     left: 110px;
@@ -88,20 +112,21 @@ pre {
     font-size: 16px;
 }
 
-#quote {
-    position: absolute;
-    bottom: 15px;
+footer {
+    background-color: #11101b;
+    color: #fefefe;
     text-align: center;
-    font-family: "Noto Sans Thai", sans-serif;
-    width: 100%;
+    position: relative;
+    height: 100px;
+    margin-top: -100px;
 }
-  
-#quote p {
+
+footer p {
     display: inline-block;
     margin: 0;
 }
 
-#quote q {
+footer q {
     font-size: 18px;
 }
 
@@ -109,7 +134,16 @@ pre {
     margin: 0 20px 0 0;
 }
 
+#justify {
+    text-align: justify;
+}
+
 @media (max-width: 1330px) {
+
+    #scroll {
+        height: 82%;
+    }
+
     #p1{
         clear: none;
         text-align: center;
@@ -119,6 +153,7 @@ pre {
     }
 
     .media {
+        float: none;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -129,15 +164,8 @@ pre {
         width: 400px;
     }
 
-    #media video {
-        margin-top: 20px;
-    }
-
-    #quote {
+    .more_data {
         position: relative;
-        width: 50%;
-        bottom: 10px;
-        text-align: center;
-        margin: auto;
     }
+    
 }
