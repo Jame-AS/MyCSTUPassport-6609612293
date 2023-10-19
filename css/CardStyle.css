@@ -5,19 +5,21 @@
     flex-wrap: wrap;
 }
 
-#wrapper {
+#column {
+    flex: 50%;
+    display: block;
+    left: 25%;
+}
+
+#row {
     display: flex;
-    flex-wrap: wrap;
-    flex: 33.33%;
-    width: 100%;
-    justify-content: space-around;
 }
 
 #card {
     width: 400px;
     height: 512px;
     padding: 2rem 1rem;
-    margin: 0 0 30px;
+    margin: 0 25% 50px;
     background: #fff;
     position: relative;
     display: flex;

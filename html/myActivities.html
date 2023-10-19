@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>My Activities</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300&display=swap"
-      rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/CardStyle.css">
-    <link rel="stylesheet" href="../css/NavigateStyle.css">
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/CardStyle.css" />
+    <link rel="stylesheet" href="../css/NavigateStyle.css" />
+    <link rel="stylesheet" href="../css/media950.css" />
   </head>
 
   <body>
@@ -44,70 +46,96 @@
     </header>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          var hamburger = document.querySelector(".hamburger");
-          var navBar = document.querySelector(".nav-bar");
-  
-          hamburger.onclick = function() {
-              navBar.classList.toggle("active");
-              navBar.style.zIndex = "10";
-          }
+      document.addEventListener("DOMContentLoaded", function () {
+        var hamburger = document.querySelector(".hamburger");
+        var navBar = document.querySelector(".nav-bar");
 
-          document.addEventListener("click", function(event) {
-              if (!navBar.contains(event.target) && !hamburger.contains(event.target)) {
-                  navBar.classList.remove("active");
-                  navBar.style.zIndex = "0";
-              }
-          });
+        hamburger.onclick = function () {
+          navBar.classList.toggle("active");
+          navBar.style.zIndex = "10";
+        };
+
+        document.addEventListener("click", function (event) {
+          if (
+            !navBar.contains(event.target) &&
+            !hamburger.contains(event.target)
+          ) {
+            navBar.classList.remove("active");
+            navBar.style.zIndex = "0";
+          }
+        });
       });
     </script>
 
     <center>
       <marquee scrollamount="7">
-        <strong>ยินดีต้อนรับผู้ที่เข้ามาเยี่ยมชมทุกท่านครับ Welcome to all visitor.</strong>
+        <strong
+          >ยินดีต้อนรับผู้ที่เข้ามาเยี่ยมชมทุกท่านครับ Welcome to all
+          visitor.</strong
+        >
       </marquee>
     </center>
-    
+
     <h1><u>My Activities</u></h1>
     <p id="description">วางเมาส์ไว้ที่ภาพเพื่อแสดงรายละเอียด</p>
-    <br>
+    <br />
 
     <div id="Card_body">
-      
-      <div id="wrapper">
-        <div id="card">
-          <img src="../image/Orientation_Day.jpg" alt="Orientation Day" />
-          <div id="info">
-            <h2>Orientation Day</h2>
-            <p style="font-family: 'Noto Sans Thai', sans-serif">4 Aug 2023</p>
-            <p style="font-family: 'Noto Sans Thai', sans-serif">Cre: IG - tuphotoclub </p>
-            <a href="OrientationDay.html" id="btn">More Details</a>
+      <div id="row">
+        <div id="column">
+          <div id="card">
+            <img src="../image/Orientation_Day.jpg" alt="Orientation Day" />
+            <div id="info">
+              <h2>Orientation Day</h2>
+              <p style="font-family: 'Noto Sans Thai', sans-serif">
+                4 Aug 2023
+              </p>
+              <p style="font-family: 'Noto Sans Thai', sans-serif">
+                Cre: IG - tuphotoclub
+              </p>
+              <a href="OrientationDay.html" id="btn">More Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="column">
+          <div id="card">
+            <img src="../image/CSTU_1stMeet.jpg" alt="CSTU 1st Meet" />
+            <div id="info">
+              <h2>CSTU 1st Meet</h2>
+              <p style="font-family: 'Noto Sans Thai', sans-serif">
+                6 Aug 2023
+              </p>
+              <p style="font-family: 'Noto Sans Thai', sans-serif">
+                Cre: IG - cstu_official
+              </p>
+              <a href="CSTU-1stMeet.html" id="btn">More Details</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div id="wrapper">
-        <div id="card">
-          <img src="../image/CSTU_1stMeet.jpg" alt="CSTU 1st Meet" />
-          <div id="info">
-            <h2>CSTU 1st Meet</h2>
-            <p style="font-family: 'Noto Sans Thai', sans-serif">6 Aug 2023</p>
-            <p style="font-family: 'Noto Sans Thai', sans-serif">Cre: IG - cstu_official </p>
-            <a href="CSTU-1stMeet.html" id="btn">More Details</a>
+      <div id="row">
+        <div id="column">
+          <div id="card">
+            <img src="../image/coming-soon.png" id="soon" />
+            <div id="info">
+              <h2 id="">Coming Soon</h2>
+              <p style="font-family: 'Noto Sans Thai', sans-serif">TBA</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div id="wrapper">
-        <div id="card">
-          <img src="../image/coming-soon.png" id="soon"/>
-          <div id="info">
-            <h2 id="">Coming Soon</h2>
-            <p style="font-family: 'Noto Sans Thai', sans-serif">TBA</p>
+        <div id="column">
+          <div id="card">
+            <img src="../image/coming-soon.png" id="soon" />
+            <div id="info">
+              <h2 id="">Coming Soon</h2>
+              <p style="font-family: 'Noto Sans Thai', sans-serif">TBA</p>
+            </div>
           </div>
         </div>
       </div>
-      
     </div>
   </body>
 </html>
