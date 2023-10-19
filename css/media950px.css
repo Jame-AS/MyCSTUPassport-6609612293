@@ -43,4 +43,23 @@
     .nav-bar ul li a {
         margin-bottom: 12px;
     }
+
+    #scroll {
+        height: 130%;
+    }
+
+    .media {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        grid-gap: 30px;
+    }
+
+    .more_data #contract {
+        position: relative;
+        float: left;
+        left: 20px;
+    }
+    
 }
