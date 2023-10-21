@@ -1,0 +1,30 @@
+@media (max-width: 1400px) {
+
+    #scroll {
+        height: 82%;
+    }
+
+    #p1{
+        clear: none;
+        text-align: center;
+        display: inline-block;
+        margin: 0 20px 20px;
+        width: 100%;
+    }
+
+    .media {
+        float: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .media .pic1, .media .vid1 {
+        width: 400px;
+    }
+
+    .more_data {
+        position: relative;
+    }
+}
