@@ -45,7 +45,7 @@ header {
     background: #fefefe;
 }
 
-@media only screen and (max-width: 1330px) {
+@media only screen and (max-width: 1400px) {
     header {
         padding: 0 50px;
     }
